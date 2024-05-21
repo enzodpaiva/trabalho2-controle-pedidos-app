@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -58,9 +59,10 @@ public class FuncionarioList extends AppCompatActivity {
     }
     private void preencheMarcas() {
         funcionarios = db.funcionarioModel().getAll();
-        ArrayAdapter<Funcionario> funcionariosAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, funcionarios);
-        listViewFuncionarios.setAdapter(funcionariosAdapter);
+        FuncionarioAdapter funcionariosAdapter = new FuncionarioAdapter(this, funcionarios);
+//        ArrayAdapter<Funcionario> funcionariosAdapter = new ArrayAdapter<>(this,
+//                android.R.layout.simple_list_item_1, funcionarios);
+        listViewFuncionarios.setAdapter((ListAdapter) funcionariosAdapter);
 
         listViewFuncionarios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,

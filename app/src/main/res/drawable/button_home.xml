@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <!-- Borda com 6dp -->
+    <corners android:radius="6dp"/> <!-- Cantos arredondados -->
+    <solid android:color="#3E3B47"/> <!-- Cor de fundo -->
+</shape>

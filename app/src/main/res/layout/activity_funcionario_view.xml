@@ -1,93 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.FuncionarioView">
+    android:background="@drawable/login_background"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        >
+
+
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Funcionario"
-            android:textSize="20sp" />
+            android:text="Cadastrar funcionário"
+            android:textSize="32dp"
+            android:layout_marginTop="32dp"
+            android:textColor="#F4EDE8"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/edtNomeFuncionario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Nome funcionario"
+            android:hint="Nome"
             android:inputType="textPersonName"
-            android:textSize="25sp" />
-        <EditText
-            android:id="@+id/edtTelefoneFuncionario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Telefone funcionario"
-            android:inputType="textPersonName"
-            android:textSize="25sp" />
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:textColorHint="#666360"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="18dp"
+
+
+            />
+
         <EditText
             android:id="@+id/edtEmailFuncionario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email funcionario"
-            android:inputType="textPersonName"
-            android:textSize="25sp" />
+            android:hint="Email"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#666360"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="18dp"
+            android:inputType="text"
+
+            />
+        <EditText
+            android:id="@+id/edtTelefoneFuncionario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefone"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#666360"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="18dp"
+            android:inputType="text"
+
+            />
+
         <EditText
             android:id="@+id/edtSenhaFuncionario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Senha funcionario"
-            android:inputType="textPersonName"
-            android:textSize="25sp" />
+            android:hint="Senha"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#666360"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="18dp"
+            android:inputType="textPassword"
 
-        <LinearLayout
+            />
+
+        <Button
+            android:id="@+id/btnSalvarFuncionario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/btnVoltar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:background="#CCCCCC"
-                android:onClick="voltar"
-                android:text="Voltar" />
-            <Button
-                android:id="@+id/btnExcluirFuncionario"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:background="#E91E1E"
-                android:onClick="excluirFuncionario"
-                android:text="Excluir" />
-            <Button
-                android:id="@+id/btnSalvarFuncionario"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:background="#9EA9E8"
-                android:onClick="salvarFuncionario"
-                android:text="Salvar" />
-        </LinearLayout>
+            android:text="Salvar"
+            android:backgroundTint="#FF9000"
+            android:textColor="#312E38"
+            android:padding="18dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:radius="2dp"
+            android:onClick="salvarFuncionario"
+            />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:backgroundTint="#FF9000"
+            android:textColor="#312E38"
+            android:padding="18dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:radius="2dp"
+            android:onClick="voltar"
+            />
+
+        <Button
+            android:id="@+id/btnExcluirFuncionario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir"
+            android:backgroundTint="#FF9000"
+            android:textColor="#312E38"
+            android:padding="18dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:radius="2dp"
+            android:onClick="excluirFuncionario"
+            />
+
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".views.FuncionarioView">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:text="Funcionario"-->
+<!--            android:textSize="20sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/edtNomeFuncionario"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Nome funcionario"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:textSize="25sp" />-->
+<!--        <EditText-->
+<!--            android:id="@+id/edtTelefoneFuncionario"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Telefone funcionario"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:textSize="25sp" />-->
+<!--        <EditText-->
+<!--            android:id="@+id/edtEmailFuncionario"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Email funcionario"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:textSize="25sp" />-->
+<!--        <EditText-->
+<!--            android:id="@+id/edtSenhaFuncionario"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Senha funcionario"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:textSize="25sp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal">-->
+<!--            <Button-->
+<!--                android:id="@+id/btnVoltar"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:background="#CCCCCC"-->
+<!--                android:onClick="voltar"-->
+<!--                android:text="Voltar" />-->
+<!--            <Button-->
+<!--                android:id="@+id/btnExcluirFuncionario"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:background="#E91E1E"-->
+<!--                android:onClick="excluirFuncionario"-->
+<!--                android:text="Excluir" />-->
+<!--            <Button-->
+<!--                android:id="@+id/btnSalvarFuncionario"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:background="#9EA9E8"-->
+<!--                android:onClick="salvarFuncionario"-->
+<!--                android:text="Salvar" />-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
