@@ -3,7 +3,7 @@ package com.example.trabalho2_controle_pedidos.entities;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(tableName = "Funcionario")
 public class Funcionario {
     @PrimaryKey(autoGenerate = true)
     private int funcId;

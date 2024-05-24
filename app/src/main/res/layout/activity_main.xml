@@ -26,9 +26,10 @@
                 tools:ignore="MissingConstraints" />
 
             <TextView
+                android:id="@+id/userNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fabio"
+                android:text="X"
                 android:textSize="24sp"
                 android:textColor="#F4EDE8"
                 android:layout_marginStart="106dp"
@@ -37,13 +38,13 @@
                 tools:ignore="MissingConstraints" />
 
             <Button
+                android:id="@+id/logoutButton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:backgroundTint="#28262E"
                 android:drawableTop="@drawable/powe_logout"
                 android:layout_marginLeft="350dp"
                 android:layout_centerVertical="true"
-
                 tools:ignore="MissingConstraints" />
 
     </RelativeLayout>
