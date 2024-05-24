@@ -16,6 +16,8 @@ import com.example.trabalho2_controle_pedidos.database.LocalDatabase;
 import com.example.trabalho2_controle_pedidos.databinding.ActivityMainBinding;
 import com.example.trabalho2_controle_pedidos.list.ClienteList;
 import com.example.trabalho2_controle_pedidos.list.FuncionarioList;
+import com.example.trabalho2_controle_pedidos.views.ClientView;
+import com.example.trabalho2_controle_pedidos.views.FuncionarioView;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -42,7 +44,22 @@ public class MainActivity extends AppCompatActivity {
                public void onClick(View v) {
                    Intent it= new Intent(MainActivity.this, ClienteList.class);
                    startActivity(it);
-           }
+               }
+        });
+
+        binding.btnRegisterClient.setOnClickListener(new View.OnClickListener(){
+               @Override
+               public void onClick(View v) {
+                   Intent it = new Intent(MainActivity.this, ClientView.class);
+                   startActivity(it);
+               }
+        });
+        binding.btnRegisterFunc.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(MainActivity.this, FuncionarioView.class);
+                startActivity(it);
+            }
         });
 
         binding.logoutButton.setOnClickListener(new View.OnClickListener() {

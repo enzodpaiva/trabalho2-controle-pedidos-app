@@ -3,68 +3,181 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:background="@drawable/login_background"
+    android:gravity="center"
+
     tools:context=".RegisterActivity">
 
+    <LinearLayout
+        android:layout_width="379dp"
+        android:layout_height="743dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/icon_account_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:text="Crie sua conta"
+            android:textColor="#F4EDE8"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Nome"
+            android:inputType="text"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="#666360"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameEditText"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="#666360"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailEditText"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Telefone"
+            android:inputType="phone"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="#666360"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneEditText"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="#666360"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordEditText"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#FF9000"
+            android:padding="18dp"
+            android:text="Cadastrar"
+            android:textColor="#312E38"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_below="@id/registerButton"
+                android:drawableLeft="@drawable/voltar"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="Voltar para o login"
+                android:textColor="#F4EDE8"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
     <!-- Name Input -->
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nome"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:layout_marginTop="50dp" />
+<!--    <EditText-->
+<!--        android:id="@+id/nameEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Nome"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_marginTop="50dp" />-->
 
-    <!-- Email Input -->
-    <EditText
-        android:id="@+id/emailEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:layout_below="@id/nameEditText"
-        android:layout_marginTop="20dp" />
+<!--    &lt;!&ndash; Email Input &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/emailEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Email"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_below="@id/nameEditText"-->
+<!--        android:layout_marginTop="20dp" />-->
 
-    <!-- Phone Input -->
-    <EditText
-        android:id="@+id/phoneEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telefone"
-        android:inputType="phone"
-        android:padding="10dp"
-        android:layout_below="@id/emailEditText"
-        android:layout_marginTop="20dp" />
+<!--    &lt;!&ndash; Phone Input &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/phoneEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Telefone"-->
+<!--        android:inputType="phone"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_below="@id/emailEditText"-->
+<!--        android:layout_marginTop="20dp" />-->
 
-    <!-- Password Input -->
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:layout_below="@id/phoneEditText"
-        android:layout_marginTop="20dp" />
+<!--    &lt;!&ndash; Password Input &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/passwordEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Senha"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_below="@id/phoneEditText"-->
+<!--        android:layout_marginTop="20dp" />-->
 
-    <!-- Register Button -->
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Concluir Cadastro"
-        android:layout_below="@id/passwordEditText"
-        android:layout_marginTop="20dp" />
+<!--    &lt;!&ndash; Register Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/registerButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Concluir Cadastro"-->
+<!--        android:layout_below="@id/passwordEditText"-->
+<!--        android:layout_marginTop="20dp" />-->
 
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Já tem uma conta? Faça Login"
-        android:layout_below="@id/registerButton"
-        android:layout_marginTop="20dp" />
+<!--    &lt;!&ndash; Login Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/loginButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Já tem uma conta? Faça Login"-->
+<!--        android:layout_below="@id/registerButton"-->
+<!--        android:layout_marginTop="20dp" />-->
 
 </RelativeLayout>
