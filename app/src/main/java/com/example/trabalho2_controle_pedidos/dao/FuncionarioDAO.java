@@ -26,4 +26,13 @@ public interface FuncionarioDAO {
 
     @Delete
     void delete(Funcionario funcionario);
+
+    @Query("SELECT EXISTS (SELECT * from Funcionario where email=:email)")
+    boolean isTaken(String email);
+
+    @Query("SELECT EXISTS (SELECT * from Funcionario where email=:email AND senha=:senha)")
+    boolean login(String email, String senha);
+
+    @Query("SELECT nome FROM Funcionario WHERE email = :email LIMIT 1")
+    String getNomeByEmail(String email);
 }
