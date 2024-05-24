@@ -4,14 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.example.trabalho2_controle_pedidos.R;
 import com.example.trabalho2_controle_pedidos.databinding.ActivityMainBinding;
+import com.example.trabalho2_controle_pedidos.list.ClienteList;
 import com.example.trabalho2_controle_pedidos.list.FuncionarioList;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent it=new Intent(MainActivity.this, FuncionarioList.class);
                 startActivity(it);
             }
+        });
+        binding.btnClientes.setOnClickListener(new View.OnClickListener(){
+               @Override
+               public void onClick(View v) {
+                   Intent it= new Intent(MainActivity.this, ClienteList.class);
+                   startActivity(it);
+           }
         });
     }
 }

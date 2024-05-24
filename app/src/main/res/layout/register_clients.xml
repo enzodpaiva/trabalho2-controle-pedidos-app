@@ -61,7 +61,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cadastrar"
+            android:text="Salvar"
             android:backgroundTint="#FF9000"
             android:textColor="#312E38"
             android:padding="18dp"
@@ -70,7 +70,33 @@
             android:radius="2dp"
             android:id="@+id/login_btn"/>
 
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:backgroundTint="#FF9000"
+            android:textColor="#312E38"
+            android:padding="18dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:radius="2dp"
+            android:onClick="voltar"
+            />
 
+        <Button
+            android:id="@+id/btnExcluirCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir"
+            android:backgroundTint="#FF9000"
+            android:textColor="#312E38"
+            android:padding="18dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:radius="2dp"
+            android:onClick="excluirFuncionario"
+            />
 
 
 

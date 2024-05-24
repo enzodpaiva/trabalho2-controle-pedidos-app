@@ -19,6 +19,12 @@
             android:name=".views.FuncionarioView"
             android:exported="false" />
         <activity
+            android:name=".list.ClienteList"
+            android:exported="false" />
+        <activity
+            android:name=".views.ClientView"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

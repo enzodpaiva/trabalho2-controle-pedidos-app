@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#312E38"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".list.FuncionarioList">
+    android:background="#312E38"
+    tools:context=".list.ClienteList">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header_layout"
@@ -16,7 +16,7 @@
         tools:ignore="MissingConstraints">
 
         <Button
-            android:id="@+id/btnHomeFuncionario"
+            android:id="@+id/btnHomeCliente"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:backgroundTint="#28262E"
@@ -32,7 +32,7 @@
             android:id="@+id/txtTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Funcionários"
+            android:text="Clientes"
             android:textColor="#F4EDE8"
             android:textStyle="bold"
             android:textSize="18sp"
@@ -43,9 +43,8 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <ListView
-        android:id="@+id/listFuncionarios"
+        android:id="@+id/listClientes"
         android:layout_width="380dp"
         android:layout_height="450dp"
         android:layout_marginStart="16dp"
@@ -54,7 +53,8 @@
         android:dividerHeight="10.0sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/list_item" />
+        tools:listitem="@layout/list_item_client" />
+
 
     <ImageButton
         android:id="@+id/btnAdd"
@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/circle_button"
-        app:layout_constraintTop_toBottomOf="@+id/listFuncionarios"
+        app:layout_constraintTop_toBottomOf="@id/listClientes"
         app:srcCompat="@drawable/icon_add"
         tools:ignore="MissingConstraints" />
 

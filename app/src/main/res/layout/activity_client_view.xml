@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
     android:gravity="center"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".views.ClientView">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,60 +17,83 @@
         android:orientation="vertical"
         >
 
-        <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:src="@drawable/icon_account_circle" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Faça seu login"
+            android:text="Dados do Cliente"
             android:textSize="32dp"
             android:layout_marginTop="32dp"
             android:textColor="#F4EDE8"
-            android:textStyle="bold"
-            android:clickable="true"
-            android:onClick="onLinkClicked" />
+            android:textStyle="bold"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:layout_marginTop="32dp"
+            android:hint="Nome"
+            android:layout_marginTop="40dp"
             android:textColor="@color/white"
             android:textColorHint="#666360"
             android:textSize="20sp"
             android:background="@drawable/rounded_corner"
             android:padding="18dp"
             android:inputType="text"
-            android:id="@+id/username_input"
+            android:id="@+id/edtNomeCliente"
             />
+
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha"
+            android:hint="Telefone"
             android:layout_marginTop="16dp"
             android:textColor="@color/white"
             android:textColorHint="#666360"
             android:textSize="20sp"
             android:background="@drawable/rounded_corner"
             android:padding="18dp"
-            android:inputType="textPassword"
-            android:id="@+id/password_input"
+            android:inputType="text"
+            android:id="@+id/edtTelefoneCliente"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Acessar"
+            android:text="Salvar"
             android:backgroundTint="#FF9000"
             android:textColor="#312E38"
             android:padding="18dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="30dp"
             android:textSize="20sp"
-            android:id="@+id/login_btn"/>
+            android:radius="2dp"
+            android:id="@+id/login_btn"
+            android:onClick="salvarCliente"/>
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:backgroundTint="#FF9000"
+            android:textColor="#312E38"
+            android:padding="18dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:radius="2dp"
+            android:onClick="voltar"
+            />
+
+        <Button
+            android:id="@+id/btnExcluirCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir"
+            android:backgroundTint="#FF9000"
+            android:textColor="#312E38"
+            android:padding="18dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:radius="2dp"
+            android:onClick="excluirCliente"
+            />
 
     </LinearLayout>
 
