@@ -70,6 +70,7 @@
 
 
                 <Button
+                    android:id="@+id/btnRegisterClient"
                     android:layout_width="120dp"
                     android:layout_height="110dp"
                     android:layout_margin="8dp"
@@ -80,6 +81,7 @@
                     android:textSize="12sp" />
 
                 <Button
+                    android:id="@+id/btnRegisterFunc"
                     android:layout_width="120dp"
                     android:layout_height="110dp"
                     android:theme="@style/Theme.ButtonHome"
