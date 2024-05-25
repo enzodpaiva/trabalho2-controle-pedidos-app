@@ -8,10 +8,12 @@ import androidx.room.RoomDatabase;
 
 import com.example.trabalho2_controle_pedidos.dao.ClienteDAO;
 import com.example.trabalho2_controle_pedidos.dao.FuncionarioDAO;
+import com.example.trabalho2_controle_pedidos.dao.PedidoDAO;
 import com.example.trabalho2_controle_pedidos.entities.Cliente;
 import com.example.trabalho2_controle_pedidos.entities.Funcionario;
+import com.example.trabalho2_controle_pedidos.entities.Pedido;
 
-@Database(entities = {Funcionario.class, Cliente.class}, version = 2)
+@Database(entities = {Funcionario.class, Cliente.class, Pedido.class}, version = 2)
 
 
 public abstract class LocalDatabase extends RoomDatabase{
@@ -26,4 +28,6 @@ public abstract class LocalDatabase extends RoomDatabase{
 
     public abstract FuncionarioDAO funcionarioModel();
     public abstract ClienteDAO clienteModel();
+
+    public abstract PedidoDAO pedidoModel();
 }
