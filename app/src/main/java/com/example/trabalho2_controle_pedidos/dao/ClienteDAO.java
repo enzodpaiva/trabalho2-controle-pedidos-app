@@ -27,4 +27,7 @@ public interface ClienteDAO {
 
     @Delete
     void delete(Cliente cliente);
+
+    @Query("SELECT * FROM Cliente WHERE nome = :nome LIMIT 1")
+    Cliente getClienteByNome(String nome);
 }

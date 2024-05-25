@@ -43,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.putExtra("USER_NAME", nome.toString());
                     startActivity(intent);
-                    startActivity(new Intent(LoginActivity.this,MainActivity.class));
                 } else {
                     Toast.makeText(LoginActivity.this,"Login invalido", Toast.LENGTH_SHORT).show();
                 }

@@ -90,8 +90,15 @@ public class ClientView extends AppCompatActivity {
     }
 
     private void excluir() {
-        db.clienteModel().delete(dbCliente);
-        Toast.makeText(this, "Cliente excluído com sucesso", Toast.LENGTH_SHORT).show();
+        int pedidoCount =  db.pedidoModel().getCountByClienteId(dbCliente.getClientId());
+
+        if (pedidoCount > 0) {
+            Toast.makeText(this, "Cliente não pode ser excluído porque possui pedidos associados", Toast.LENGTH_SHORT).show();
+        }else{
+            db.clienteModel().delete(dbCliente);
+            Toast.makeText(this, "Cliente excluído com sucesso", Toast.LENGTH_SHORT).show();
+        }
+
         finish();
     }
     public void voltar(View view) {

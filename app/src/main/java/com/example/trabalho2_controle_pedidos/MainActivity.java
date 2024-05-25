@@ -16,8 +16,10 @@ import com.example.trabalho2_controle_pedidos.database.LocalDatabase;
 import com.example.trabalho2_controle_pedidos.databinding.ActivityMainBinding;
 import com.example.trabalho2_controle_pedidos.list.ClienteList;
 import com.example.trabalho2_controle_pedidos.list.FuncionarioList;
+import com.example.trabalho2_controle_pedidos.list.PedidoList;
 import com.example.trabalho2_controle_pedidos.views.ClientView;
 import com.example.trabalho2_controle_pedidos.views.FuncionarioView;
+import com.example.trabalho2_controle_pedidos.views.PedidoView;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -45,6 +47,22 @@ public class MainActivity extends AppCompatActivity {
                    Intent it= new Intent(MainActivity.this, ClienteList.class);
                    startActivity(it);
                }
+        });
+
+        binding.btnPedidos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it= new Intent(MainActivity.this, PedidoList.class);
+                startActivity(it);
+            }
+        });
+
+        binding.btnRegisterPedido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it= new Intent(MainActivity.this, PedidoView.class);
+                startActivity(it);
+            }
         });
 
         binding.btnRegisterClient.setOnClickListener(new View.OnClickListener(){
