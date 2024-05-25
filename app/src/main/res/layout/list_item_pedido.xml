@@ -38,7 +38,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_list_order" />
+                    android:src="@drawable/icon_description" />
 
                 <TextView
                     android:id="@+id/descricao_pedido"
@@ -59,7 +59,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_list_order" />
+                    android:src="@drawable/icon_value" />
 
                 <TextView
                     android:id="@+id/valor_total_pedido"

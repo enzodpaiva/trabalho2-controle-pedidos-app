@@ -46,7 +46,7 @@
             android:id="@+id/edtValorTotalPedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="valorTotal"
+            android:hint="Valor"
             android:layout_marginTop="16dp"
             android:textColor="@color/white"
             android:textColorHint="#666360"
@@ -56,16 +56,30 @@
             android:inputType="numberDecimal"
 
             />
+     <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    <Spinner
+        android:id="@+id/spinnerCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_spinner"
+        android:padding="18dp"
+        android:textColor="@color/white"
+        />
+         <ImageView
+             android:id="@+id/spinnerArrow"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_alignParentEnd="true"
+             android:layout_centerVertical="true"
+             android:paddingEnd="2dp"
+             android:paddingTop="20dp"
+             android:src="@drawable/arrow_drop_down" />
 
-        <Spinner
-            android:id="@+id/spinnerCliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner"
-            android:padding="18dp"
-            android:textColor="@color/white"
-            />
+</RelativeLayout>
+
 
         <Button
             android:id="@+id/btnSalvarPedido"
